@@ -1,13 +1,132 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
+:root
+{
+    --main-color:#0aad0a;
+    --light-color:#f0f3f2;
+    --shadow: rgba(145,158,171,.2) 0px 2px 4px -1px,rgba(145,158,171,.14) 0px 4px 5px 0px,rgba(145,158,171,.12) 0px 1px 10px 0px;
+    --font-family:'Encode Sans Expanded', sans-serif;
+    --rating-color:#ffc908;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+    font-family: var(--font-family) !important;
+}
+.rating-color
+{
+    color: var(--rating-color);
+}
+.cursor-pointer
+{
+    cursor: pointer;
+}
+a , a:hover{
+    color: black;
+    text-decoration: none;
+}
+.product:hover
+{
+    box-shadow: var(--shadow);
+    border: solid 1px var(--main-color);
+}
+.product .btn 
+{
+    transition: all 0.6s;
+    transform: translateY(100%);
+    opacity: 0;
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -ms-transition: all 0.6s;
+    -o-transition: all 0.6s;
+}
+.product:hover .btn 
+{
+    opacity: 1;
+    transform: translateY(0%);
+
+}
+.product .btn:hover {
+    box-shadow: 0 0 0 1px var(--main-color);
+    color: var(--main-color) !important;
+    background-color: #fff !important;
+}
+.font-sm
+{
+    font-size: 14px;
+}
+.text-main
+{
+    color: var(--main-color);
+}
+.bg-main
+{
+    background-color: var(--main-color) !important;
+}
+.bg-main-light 
+{
+    background-color: var(--light-color) !important;
+}
+
+.btn-primary,
+.btn-primary:disabled {
+    color: #fff;
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+    font-size: 0.8rem;
+}
+
+.btn-primary:hover {
+    background-color: #099309 !important;
+    color: #fff;
+    border-color: #088a08;
+}
+
+form .form-control {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+form .form-control:focus {
+    border-color: var(--main-color);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #0aad0a48;
+}
+
+.fw-fs {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.alert-input {
+    height: 20px;
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 12px 15px;
+}
+
+.offline {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px 50px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.my-brdr {
+    border: 1px solid var(--main-color);
+}
+
+#cart .btn:hover {
+    border: 1px solid;
+    color: var(--main-color) ;
+}
+
+.my-btn:hover {
+    color: var(--main-color);
 }

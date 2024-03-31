@@ -1,0 +1,17 @@
+
+nav .nav-link {
+    font-weight: 600;
+    transition: color 0.4s;
+    -webkit-transition: color 0.4s;
+    -moz-transition: color 0.4s;
+    -ms-transition: color 0.4s;
+    -o-transition: color 0.4s;
+}
+
+nav .nav-link:hover {
+    color: var(--main-color) !important;
+}
+
+nav .nav-link.active {
+    color: var(--main-color) !important;
+}
